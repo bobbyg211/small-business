@@ -1,0 +1,45 @@
+/* Navbar */
+.navbar {
+  margin-bottom: 50px;
+}
+
+.navbar .nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar .nav-list .nav-list-item {
+  padding-left: 20px;
+}
+
+.navbar .nav-list .nav-list-item a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+/* Login form */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 50%;
+}
+
+.login-button {
+  margin-top: 25px !important;
+}
+
+/* Details */
+
+.details h4,
+.details h5,
+.details p {
+  margin-bottom: 20px;
+}
+
+.details h5 {
+  font-weight: bold;
+}

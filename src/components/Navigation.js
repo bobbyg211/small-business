@@ -20,7 +20,7 @@ export default function Navigation() {
               window.location.replace("/login");
             }}
           >
-            <Link to="/login">Logout</Link>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </Toolbar>
