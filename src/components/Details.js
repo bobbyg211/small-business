@@ -4,9 +4,10 @@ const { REACT_APP_GKEY } = process.env;
 
 export default function Details(props) {
   const id = props.match.params.id;
-  const listing = props.listings.find((listing) => listing.id === id);
+  const listing = props.listings.find((listing) => listing.id == id);
   let key = REACT_APP_GKEY;
   let address = props.listings[id - 1].address;
+  console.log(listing);
 
   return (
     <Container className="details" maxWidth="sm">

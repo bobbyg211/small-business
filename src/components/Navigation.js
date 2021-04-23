@@ -7,12 +7,17 @@ export default function Navigation() {
     <AppBar position="relative" className="navbar">
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: "1" }}>
-          Small Business
+          Fairfax Small Business
         </Typography>
         <ul className="nav-list">
           <li className="nav-list-item">
             <Link to="/">Listings</Link>
           </li>
+          {document.cookie === "loggedIn=true" ? (
+            <li className="nav-list-item">
+              <Link to="/add">Add</Link>
+            </li>
+          ) : null}
           <li
             className="nav-list-item"
             onClick={() => {
@@ -22,7 +27,7 @@ export default function Navigation() {
           >
             <Link to="/login">
               {document.cookie === "loggedIn=true" ? (
-                <span>Logout</span>
+                <span>LOGOUT</span>
               ) : (
                 <span>Login</span>
               )}
