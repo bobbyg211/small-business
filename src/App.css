@@ -32,6 +32,12 @@
   margin-top: 25px !important;
 }
 
+/* Listings */
+
+.delete-icon {
+  color: red;
+}
+
 /* Details */
 
 .details h4,

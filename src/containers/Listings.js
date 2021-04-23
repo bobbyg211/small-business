@@ -1,5 +1,7 @@
 import { connect } from "react-redux";
 import Listings from "../components/Listings";
+import { addListing } from "../redux/actions";
+import { deleteListing } from "../redux/actions";
 
 const mapStateToProps = (state) => {
   return {
@@ -7,4 +9,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Listings);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addListing: (index) => dispatch(addListing(index)),
+    deleteListing: (index) => dispatch(deleteListing(index)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Listings);

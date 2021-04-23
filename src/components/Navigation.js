@@ -20,7 +20,13 @@ export default function Navigation() {
               window.location.replace("/login");
             }}
           >
-            <Link to="/login">Login</Link>
+            <Link to="/login">
+              {document.cookie === "loggedIn=true" ? (
+                <span>Logout</span>
+              ) : (
+                <span>Login</span>
+              )}
+            </Link>
           </li>
         </ul>
       </Toolbar>
