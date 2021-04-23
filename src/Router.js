@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router";
 import cookie from "cookie";
 import Listings from "./containers/Listings";
+import Details from "./containers/Details";
 import Login from "./components/Login";
 
 // Write checkAuth function here
@@ -26,6 +27,7 @@ const Router = () => {
     <Switch>
       <Route path="/login" component={Login} />
       <Route exact path="/" component={Listings} />
+      <Route path="/listing/:id" component={Details} />
       {/* <ProtectedRoute path="/about" component={About} /> */}
     </Switch>
   );

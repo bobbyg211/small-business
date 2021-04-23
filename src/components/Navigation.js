@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-const Navigation = () => {
+export default function Navigation() {
   return (
     <AppBar position="relative" className="navbar">
       <Toolbar>
@@ -26,6 +26,4 @@ const Navigation = () => {
       </Toolbar>
     </AppBar>
   );
-};
-
-export default Navigation;
+}

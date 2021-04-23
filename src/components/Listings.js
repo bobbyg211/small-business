@@ -9,8 +9,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-const Listings = (props) => {
-  console.log(props);
+export default function Listings(props) {
   return (
     <Container>
       <Table>
@@ -23,26 +22,18 @@ const Listings = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.listings.map((listing, index) => (
+          {props.listings.map((listing) => (
             <TableRow key={listing.id}>
               <TableCell component="th" scope="row">
-                <Link
-                  to={`/listing/${listing.id}`}
-                  onClick={() => props.updateMap(listing.address)}
-                >
-                  {" "}
-                  {listing["name"]}
-                </Link>
+                <Link to={`/listing/${listing.id}`}>{listing.name}</Link>
               </TableCell>
-              <TableCell>{listing["description"]}</TableCell>
-              <TableCell>{listing["address"]}</TableCell>
-              <TableCell>{listing["hours"]}</TableCell>
+              <TableCell>{listing.description}</TableCell>
+              <TableCell>{listing.address}</TableCell>
+              <TableCell>{listing.hours}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </Container>
   );
-};
-
-export default Listings;
+}
